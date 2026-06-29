@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HrvOverviewTabBase</class>
+ <widget class="QWidget" name="HrvOverviewTabBase">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>620</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="rootLayout">
+   <property name="leftMargin"><number>6</number></property>
+   <property name="topMargin"><number>6</number></property>
+   <property name="rightMargin"><number>6</number></property>
+   <property name="bottomMargin"><number>6</number></property>
+   <property name="spacing"><number>4</number></property>
+
+   <item>
+    <widget class="QLabel" name="placeholder">
+     <property name="text">
+      <string>Open a Kubios HRV CSV file to see results overview.</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #666666; font-size: 13pt; padding: 30px;</string>
+     </property>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QWidget" name="tileWidget" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size><width>0</width><height>200</height></size>
+     </property>
+     <layout class="QGridLayout" name="tileGrid">
+      <property name="leftMargin"><number>0</number></property>
+      <property name="topMargin"><number>0</number></property>
+      <property name="rightMargin"><number>0</number></property>
+      <property name="bottomMargin"><number>0</number></property>
+      <property name="spacing"><number>4</number></property>
+      <!-- 16개 타일은 런타임에 코드에서 _tile()로 생성된다.
+           이 영역의 마진·spacing·minimumSize 만 Designer에서 조정 가능. -->
+     </layout>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QWidget" name="bottomWidget" native="true">
+     <layout class="QGridLayout" name="bottomGrid">
+      <property name="leftMargin"><number>0</number></property>
+      <property name="topMargin"><number>4</number></property>
+      <property name="rightMargin"><number>0</number></property>
+      <property name="bottomMargin"><number>0</number></property>
+      <property name="spacing"><number>6</number></property>
+      <!-- 가로 stretch 비율: summary 2 / PSD 3 / Poincaré 3 -->
+      <property name="columnStretch">
+       <string>2,3,3</string>
+      </property>
+
+      <item row="0" column="0">
+       <widget class="QScrollArea" name="summaryScroll">
+        <property name="frameShape"><enum>QFrame::NoFrame</enum></property>
+        <property name="widgetResizable"><bool>true</bool></property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QScrollArea { background: transparent; }</string>
+        </property>
+        <widget class="QLabel" name="summaryText">
+         <property name="text"><string/></property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+         </property>
+         <property name="textInteractionFlags">
+          <set>Qt::TextSelectableByMouse</set>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #FAFAFA; border: 1px solid #E0E0E0; padding: 6px 8px; border-radius: 4px;</string>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </widget>
+      </item>
+
+      <item row="0" column="1">
+       <widget class="MplCanvas" name="canvasMiniPsd" native="true">
+        <property name="minimumSize">
+         <size><width>200</width><height>140</height></size>
+        </property>
+       </widget>
+      </item>
+
+      <item row="0" column="2">
+       <widget class="MplCanvas" name="canvasMiniPoin" native="true">
+        <property name="minimumSize">
+         <size><width>200</width><height>140</height></size>
+        </property>
+       </widget>
+      </item>
+
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MplCanvas</class>
+   <extends>QWidget</extends>
+   <header>nirs_vot_gui.widgets.mpl_canvas</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

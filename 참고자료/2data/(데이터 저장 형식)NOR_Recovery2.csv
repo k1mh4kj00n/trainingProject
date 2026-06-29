@@ -1,0 +1,13 @@
+﻿Item,Value,TimePoint,
+Baseline SmO2 (%),54.28703704,11:25:30,baseline start
+Slope1 0-60s (%/s),-0.582185491,11:26:30,baseline end
+Slope1 30-150s (%/s),-0.274291005,11:26:30,Occlusion
+Oxy Deficit (%·s),12605.30556,11:31:30,Deflation
+Min SmO2 (%),0.222222222,11:34:30,Reperfusion tail
+Peak SmO2 (%),76.88888889,,
+Magnitude (%),76.66666667,,
+Slope2 0-10s (%/s),3.693795094,,
+Slope2 0-30s (%/s),2.816334685,,
+T50 (s),10.35185194,,
+T95 (s),29.25,,
+AUC 3min (%·min),36.10447531,,

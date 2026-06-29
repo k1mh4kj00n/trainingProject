@@ -1,0 +1,38 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Local secrets and machine settings
+.env
+.env.*
+!.env.example
+.claude/settings.local.json
+.mcp.json
+credentials.json
+*.pem
+
+# Python / build artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+build/
+dist/
+
+# Packaged binaries and archives are published through GitHub Releases.
+*.exe
+*.zip
+
+# Windows metadata / temporary files
+*:Zone.Identifier
+*.tmp
+*.bak
+~$*
+

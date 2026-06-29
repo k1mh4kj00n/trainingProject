@@ -1,0 +1,9 @@
+# Windows 환경 의존성 (Python 3.10 이상)
+# 설치: setup.bat 또는 `pip install -r requirements-win.txt`
+
+PySide6>=6.5
+matplotlib>=3.7
+scipy>=1.10
+pandas>=2.0
+numpy>=1.24
+openpyxl>=3.1

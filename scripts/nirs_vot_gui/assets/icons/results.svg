@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#24292E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <!-- 테이블 외곽 -->
+  <rect x="3" y="3" width="18" height="18" rx="2"/>
+  <!-- 헤더 라인 -->
+  <line x1="3" y1="8" x2="21" y2="8"/>
+  <!-- 컬럼 구분 -->
+  <line x1="12" y1="8" x2="12" y2="21"/>
+  <!-- 행 구분 -->
+  <line x1="3" y1="13" x2="21" y2="13"/>
+  <line x1="3" y1="17" x2="21" y2="17"/>
+</svg>

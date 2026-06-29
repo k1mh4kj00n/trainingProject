@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HrvNonlinearTabBase</class>
+ <widget class="QWidget" name="HrvNonlinearTabBase">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>1100</width><height>620</height></rect>
+  </property>
+  <layout class="QVBoxLayout" name="rootLayout">
+   <property name="leftMargin"><number>6</number></property>
+   <property name="topMargin"><number>6</number></property>
+   <property name="rightMargin"><number>6</number></property>
+   <property name="bottomMargin"><number>6</number></property>
+
+   <item>
+    <widget class="QLabel" name="placeholder">
+     <property name="text"><string>Nonlinear Results</string></property>
+     <property name="alignment"><set>Qt::AlignCenter</set></property>
+     <property name="styleSheet">
+      <string notr="true">color: #666666; font-size: 13pt; padding: 30px;</string>
+     </property>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QSplitter" name="splitter">
+     <property name="orientation"><enum>Qt::Horizontal</enum></property>
+     <property name="childrenCollapsible"><bool>false</bool></property>
+
+     <widget class="QWidget" name="leftPane" native="true">
+      <layout class="QVBoxLayout" name="leftLayout">
+       <property name="leftMargin"><number>0</number></property>
+       <property name="topMargin"><number>0</number></property>
+       <property name="rightMargin"><number>0</number></property>
+       <property name="bottomMargin"><number>0</number></property>
+       <item>
+        <widget class="QLabel" name="title">
+         <property name="text"><string>Nonlinear Results</string></property>
+         <property name="styleSheet">
+          <string notr="true">font-weight: bold; font-size: 11pt; padding: 4px 2px;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="table">
+         <property name="alternatingRowColors"><bool>true</bool></property>
+         <property name="editTriggers"><set>QAbstractItemView::NoEditTriggers</set></property>
+         <attribute name="horizontalHeaderVisible"><bool>true</bool></attribute>
+         <attribute name="verticalHeaderVisible"><bool>false</bool></attribute>
+         <column><property name="text"><string>Variable</string></property></column>
+         <column><property name="text"><string>Value</string></property></column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+
+     <widget class="QWidget" name="rightPane" native="true">
+      <layout class="QVBoxLayout" name="rightLayout">
+       <property name="leftMargin"><number>0</number></property>
+       <property name="topMargin"><number>0</number></property>
+       <property name="rightMargin"><number>0</number></property>
+       <property name="bottomMargin"><number>0</number></property>
+       <property name="spacing"><number>4</number></property>
+       <item>
+        <widget class="MplCanvas" name="canvasPoin" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch><verstretch>3</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize"><size><width>0</width><height>180</height></size></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="MplCanvas" name="canvasDfa" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch><verstretch>2</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize"><size><width>0</width><height>120</height></size></property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MplCanvas</class>
+   <extends>QWidget</extends>
+   <header>nirs_vot_gui.widgets.mpl_canvas</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

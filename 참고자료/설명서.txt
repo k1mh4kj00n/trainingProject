@@ -1,0 +1,46 @@
+pdf 파일은 이 검사에 대한 논문
+
+
+NIRS-VOT(SmO2)데이터 폴더
+
+Calf로 끝나는게 데이터 파일 - 각 파일 마다 2번의 테스트 데이터가 존재
+
+Calf 없이 끝나는 엑셀 파일은 시간 정보 기록된 파일
+하단 2번쨰 탭 (Timepoint) 탭 NIRS-VOT가 시간정보
+
+이찬민 HYPER - Baseline
+baseline 14:00:00
+occlusion 14:01:00
+deflation 14:06:00
+finish 14:09:00
+
+이찬민 HYPER - Recovery2
+baseline 15:06:00
+occlusion 15:07:00
+deflation 15:12:00
+finish 15:15:00
+
+이찬민 NOR - Baseline
+baseline 13:02:00
+occlusion 13:03:00
+deflation 13:08:00
+finish 13:11:00
+
+이찬민 NOR - Recovery2
+baseline 14:04:40
+occlusion 14:05:40
+deflation 14:10:40
+finish 14:13:40
+
+이찬민 HYPO - Baseline
+baseline 12:14:30
+occlusion 12:15:30
+deflation 12:20:30
+finish 12:23:30
+
+이찬민 HYPO - Recovery2
+baseline 13:12:00
+occlusion 13:13:00
+deflation 13:18:00
+finish 13:21:00
+

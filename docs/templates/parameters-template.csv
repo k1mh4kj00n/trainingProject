@@ -1,0 +1,36 @@
+﻿Section,Key,Value,Hint
+Subject,ID(Protocol),,
+Subject,Name,,
+Subject,D.O.B,,YYYY-MM-DD
+Subject,Age,,
+Subject,Gender,,Male / Female / Other
+Subject,Weight(kg),,
+Subject,Height(cm),,
+Subject,Wattmax,,
+Subject,VO2max,,
+Subject,W/kg,,
+Subject,FTP,,
+Subject,AT(VT1),,
+Subject,RC(VT2),,
+Subject,Wattmax(90%),,
+Subject,Wattmax(40%),,
+Subject,Wattmax(110%),,
+Subject,안장 높이,,
+Subject,안정시 심박수,,
+NIRS_VOT,Baseline.start,,HH:MM:SS (occlusion 시작)
+NIRS_VOT,Baseline.end,,HH:MM:SS (deflate 시점)
+NIRS_VOT,Recovery2.start,,HH:MM:SS
+NIRS_VOT,Recovery2.end,,HH:MM:SS
+HRV,Baseline.start,,HH:MM:SS  (분석 미사용)
+HRV,Baseline.end,,HH:MM:SS  (분석 미사용)
+HRV,Recovery2.start,,HH:MM:SS  (분석 미사용)
+HRV,Recovery2.end,,HH:MM:SS  (분석 미사용)
+Anchor,lead_sec,60,초 (default 60)
+Anchor,tail_sec,180,초 (default 180)
+Exercise,TTE1,,HH:MM:SS  Ex1 인터벌 Time To Exhaustion
+Exercise,TTE2,,HH:MM:SS  Ex2 인터벌 Time To Exhaustion
+Exercise,TTE_maintenance_rate,,"% (목표 와트 유지율, 70% 미만 = 경고)"
+Lock,baseline_enabled,false,true 일 때만 baseline_value 잠금 (Apply 후에도 유지)
+Lock,baseline_value,0,% (0~100)
+Lock,min_time,,HH:MM:SS (빈 칸이면 자동검출)
+Lock,peak_time,,HH:MM:SS (빈 칸이면 자동검출)
